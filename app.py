@@ -12,18 +12,18 @@ st.title("🛋️ AIインテリア・リフォームビジュアライザー")
 st.markdown("お好みのスタイルや条件を選ぶだけで、AIが生成した標準的な部屋のリフォーム後イメージ動画を表示します。")
 
 st.markdown("---")
-video_database = {
+assets = {
     "リビングルーム": {
-        "北欧風 (Scandinavian)": "videos/living_scandi.mp4",
-        "モダン (Modern)": "videos/living_modern.mp4",
-        "インダストリアル (Industrial)": "videos/living_industrial.mp4",
-        "和モダン (Japandi)": "videos/living_japandi.mp4",
+        "北欧風 (Scandinavian)": {"type": "video", "path": "videos/living_scandi.mp4"},
+        "モダン (Modern)": {"type": "video", "path": "videos/living_modern.mp4"},
+        "インダストリアル (Industrial)": {"type": "video", "path": "videos/living_industrial.mp4"},
+        "和モダン (Japandi)": {"type": "video", "path": "videos/living_japandi.mp4"},
     },
     "ワークスペース (書斎)": {
-        "北欧風 (Scandinavian)": "videos/work_scandi.mp4",
-        "モダン (Modern)": "videos/work_modern.mp4",
-        "インダストリアル (Industrial)": "videos/work_industrial.mp4",
-        "和モダン (Japandi)": "videos/work_japandi.png",
+        "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
+        "モダン (Modern)": {"type": "video", "path": "videos/work_modern.mp4"},
+        "インダストリアル (Industrial)": {"type": "video", "path": "videos/work_industrial.mp4"},
+        "和モダン (Japandi)": {"type": "image", "path": "images/work_japandi.jpg"}, # ここを画像に指定
     }
 }
 # サイドバー：ユーザーの選択項目
@@ -49,13 +49,19 @@ selected_video_path = video_database[room_type][style]
 # メイン画面のレイアウト（2カラム構成）
 col1, col2 = st.columns([2, 1])
 
+# --- メイン画面での表示制御 ---
 with col1:
     st.subheader(f"🎬 プレビュー: {room_type} / {style}")
-    # 実際には動画ファイルへの正しいパスまたはURLを指定してください
-    st.video(selected_video_path)
     
-    st.caption(f"現在の設定: {lighting}でのシミュレーション映像")
-
+    # 選択されたコンテンツ情報を取得
+    content = assets[room_type][style]
+    
+    if content["type"] == "video":
+        st.video(content["path"])
+    else:
+        # 画像を表示し、キャプションを追加
+        st.image(content["path"], use_container_width=True)
+        st.info("※ このスタイルは現在、静止画でのシミュレーションとなります。")
 with col2:
     st.subheader("💡 スタイルの特徴とポイント")
     
