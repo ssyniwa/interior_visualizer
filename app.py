@@ -12,7 +12,20 @@ st.title("🛋️ AIインテリア・リフォームビジュアライザー")
 st.markdown("お好みのスタイルや条件を選ぶだけで、AIが生成した標準的な部屋のリフォーム後イメージ動画を表示します。")
 
 st.markdown("---")
-
+video_database = {
+    "リビングルーム": {
+        "北欧風 (Scandinavian)": "videos/living_scandi.mp4",
+        "モダン (Modern)": "videos/living_modern.mp4",
+        "インダストリアル (Industrial)": "videos/living_industrial.mp4",
+        "和モダン (Japandi)": "videos/living_japandi.mp4",
+    },
+    "ワークスペース (書斎)": {
+        "北欧風 (Scandinavian)": "videos/work_scandi.mp4",
+        "モダン (Modern)": "videos/work_modern.mp4",
+        "インダストリアル (Industrial)": "videos/work_industrial.mp4",
+        "和モダン (Japandi)": "videos/work_japandi.mp4",
+    }
+}
 # サイドバー：ユーザーの選択項目
 st.sidebar.header("🎨 リフォーム条件の選択")
 
@@ -31,24 +44,15 @@ lighting = st.sidebar.radio(
     ["🌙 夜間の暖色系間接照明"]
 )
 
-# 動画ファイルのパス（またはURL）のマッピング
-# ※実際には、事前に生成したAI動画のファイルパスやクラウド上のURLを指定します
-video_database = {
-    "北欧風 (Scandinavian)": "https://www.w3schools.com/html/mov_bbb.mp4",  # サンプル用URL
-    "モダン (Modern)": "https://www.w3schools.com/html/mov_bbb.mp4",
-    "インダストリアル (Industrial)": "https://www.w3schools.com/html/mov_bbb.mp4",
-    "和モダン (Japandi)": "https://www.w3schools.com/html/mov_bbb.mp4"
-}
+selected_video_path = video_database[room_type][style]
 
 # メイン画面のレイアウト（2カラム構成）
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    st.subheader(f"🎬 プレビュー: {style} / {room_type}")
-    
-    # 選択されたスタイルの動画を表示
-    selected_video = video_database.get(style, "https://www.w3schools.com/html/mov_bbb.mp4")
-    st.video(selected_video)
+    st.subheader(f"🎬 プレビュー: {room_type} / {style}")
+    # 実際には動画ファイルへの正しいパスまたはURLを指定してください
+    st.video(selected_video_path)
     
     st.caption(f"現在の設定: {lighting}でのシミュレーション映像")
 
