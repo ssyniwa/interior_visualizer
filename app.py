@@ -13,17 +13,30 @@ st.markdown("お好みのスタイルや条件を選ぶだけで、AIが生成�
 
 st.markdown("---")
 assets = {
+    # assets辞書にリビング・ワークスペース用のパスを追加（適宜動画や画像のパスに変更してください）
     "リビングルーム": {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/living_scandi.mp4"},
         "モダン (Modern)": {"type": "video", "path": "videos/living_modern.mp4"},
         "インダストリアル (Industrial)": {"type": "video", "path": "videos/living_industrial.mp4"},
         "和モダン (Japandi)": {"type": "video", "path": "videos/living_japandi.mp4"},
+        "ボヘミアン (Bohemian)": {"type": "video", "path": "videos/living_bohemian.mp4"},
+        "ミニマリスト (Minimalist)": {"type": "video", "path": "videos/living_minimalist.mp4"},
+        "ブルックリン (Brooklyn)": {"type": "video", "path": "videos/living_brooklyn.mp4"},
+        "フレンチシック (French Chic)": {"type": "video", "path": "videos/living_french.mp4"},
+        "コースタル (Coastal)": {"type": "video", "path": "videos/living_coastal.mp4"},
+        "レトロモダン (Mid-Century)": {"type": "video", "path": "videos/living_retro.mp4"},
     },
     "ワークスペース (書斎)": {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
         "モダン (Modern)": {"type": "video", "path": "videos/work_modern.mp4"},
         "インダストリアル (Industrial)": {"type": "video", "path": "videos/work_industrial.mp4"},
-        "和モダン (Japandi)": {"type": "image", "path": "videos/work_japandi.png"}, # ここを画像に指定
+        "和モダン (Japandi)": {"type": "image", "path": "videos/work_japandi.png"},
+        "ボヘミアン (Bohemian)": {"type": "video", "path": "videos/work_bohemian.mp4"},
+        "ミニマリスト (Minimalist)": {"type": "video", "path": "videos/work_minimalist.mp4"},
+        "ブルックリン (Brooklyn)": {"type": "video", "path": "videos/work_brooklyn.mp4"},
+        "フレンチシック (French Chic)": {"type": "video", "path": "videos/work_french.mp4"},
+        "コースタル (Coastal)": {"type": "video", "path": "videos/work_coastal.mp4"},
+        "レトロモダン (Mid-Century)": {"type": "video", "path": "videos/work_retro.mp4"},
     }
 }
 # サイドバー：ユーザーの選択項目
@@ -31,7 +44,18 @@ st.sidebar.header("🎨 リフォーム条件の選択")
 
 style = st.sidebar.selectbox(
     "インテリアスタイル",
-    ["北欧風 (Scandinavian)", "モダン (Modern)", "インダストリアル (Industrial)", "和モダン (Japandi)"]
+    [
+        "北欧風 (Scandinavian)", 
+        "モダン (Modern)", 
+        "インダストリアル (Industrial)", 
+        "和モダン (Japandi)",
+        "ボヘミアン (Bohemian)",
+        "ミニマリスト (Minimalist)",
+        "ブルックリン (Brooklyn)",
+        "フレンチシック (French Chic)",
+        "コースタル (Coastal)",
+        "レトロモダン (Mid-Century)"
+    ]
 )
 
 room_type = st.sidebar.selectbox(
@@ -91,13 +115,62 @@ with col2:
             - スチール脚のウッドシェルフ
             - ブラックメタルのフロアランプ
         """)
-    else:  # 和モダン (Japandi)
+    elif style == "和モダン (Japandi)":
         st.markdown("""
         - **コンセプト:** 和の静寂と北欧の温かみの融合
         - **カラーパレット:** ベージュ、ウォールナット、墨色
         - **おすすめ家具:** 
             - ロータイプのウッドベッド・ソファ
             - 障子風の間仕切りや和紙の照明
+        """)
+    elif style == "ボヘミアン (Bohemian)":
+        st.markdown("""
+        - **コンセプト:** 自由で個性的な、色や素材をミックスした空間
+        - **カラーパレット:** テラコッタ、マスタード、アースカラー
+        - **おすすめ家具:** 
+            - ラタン・籐素材のチェア
+            - 民族柄のラグやクッション
+            - ハンギングプランター
+        """)
+    elif style == "ミニマリスト (Minimalist)":
+        st.markdown("""
+        - **コンセプト:** 極限まで装飾を排した究極のシンプル
+        - **カラーパレット:** ピュアホワイト、アイボリー、ライトグレー
+        - **おすすめ家具:** 
+            - 脚のすっきりしたローデザイン家具
+            - 隠す収納のテレビボード
+        """)
+    elif style == "ブルックリン (Brooklyn)":
+        st.markdown("""
+        - **コンセプト:** 倉庫を思わせるラフで男前なヴィンテージスタイル
+        - **カラーパレット:** レンガの赤茶、ダークグレー、古材ブラウン
+        - **おすすめ家具:** 
+            - ヴィンテージ風レザーソファ
+            - パイプフレームのオープンシェルフ
+        """)
+    elif style == "フレンチシック (French Chic)":
+        st.markdown("""
+        - **コンセプト:** シャビーな風合いを残した大人の甘さを持つ空間
+        - **カラーパレット:** アンティークホワイト、グレイッシュブルー
+        - **おすすめ家具:** 
+            - 猫脚のアンティーク風テーブル
+            - ベルベット調のチェア
+        """)
+    elif style == "コースタル (Coastal)":
+        st.markdown("""
+        - **コンセプト:** カリフォルニアの海辺を感じる爽やかなリゾート空間
+        - **カラーパレット:** オーシャンブルー、サンドベージュ、ホワイト
+        - **おすすめ家具:** 
+            - デニム生地のファブリックソファ
+            - 流木や麻を使った小物
+        """)
+    elif style == "レトロモダン (Mid-Century)":
+        st.markdown("""
+        - **コンセプト:** 1950〜60年代のレトロな温かみを感じる空間
+        - **カラーパレット:** マスタードイエロー、オリーブグリーン
+        - **おすすめ家具:** 
+            - ウッドフレームのパーソナルチェア
+            - レトロなフロアランプ
         """)
 
 # フッター
