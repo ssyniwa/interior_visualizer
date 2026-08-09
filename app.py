@@ -44,7 +44,7 @@ lighting = st.sidebar.radio(
     ["🌙 夜間の暖色系間接照明"]
 )
 
-selected_video_path = video_database[room_type][style]
+selected_video_path = assets[room_type][style]
 
 # メイン画面のレイアウト（2カラム構成）
 col1, col2 = st.columns([2, 1])
