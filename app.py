@@ -23,7 +23,7 @@ assets = {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
         "モダン (Modern)": {"type": "video", "path": "videos/work_modern.mp4"},
         "インダストリアル (Industrial)": {"type": "video", "path": "videos/work_industrial.mp4"},
-        "和モダン (Japandi)": {"type": "image", "path": "images/work_japandi.jpg"}, # ここを画像に指定
+        "和モダン (Japandi)": {"type": "image", "path": "videos/work_japandi.jpg"}, # ここを画像に指定
     }
 }
 # サイドバー：ユーザーの選択項目
