@@ -23,7 +23,7 @@ video_database = {
         "北欧風 (Scandinavian)": "videos/work_scandi.mp4",
         "モダン (Modern)": "videos/work_modern.mp4",
         "インダストリアル (Industrial)": "videos/work_industrial.mp4",
-        "和モダン (Japandi)": "videos/work_japandi.mp4",
+        "和モダン (Japandi)": "videos/work_japandi.png",
     }
 }
 # サイドバー：ユーザーの選択項目
