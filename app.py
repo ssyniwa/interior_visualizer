@@ -72,7 +72,7 @@ assets = {
         "海中 (Underwater)": {"type": "image", "path": "videos/work_underwater.png"},
         "新緑の森 (Forest)": {"type": "image", "path": "videos/work_forest.png"},
         "星空 (Starry Sky)": {"type": "image", "path": "videos/work_starry.png"},
-        "天空 (Sky Sanctuary)": {"type": "image", "path": "videos/work_sky.png"},
+        "天空 (Sky Sanctuary)": {"type": "image", "path": "videos/work_sky.jpg"},
         "電子空間 (Cyberspace)": {"type": "image", "path": "videos/work_cyberspace.png"},
         "雷鳴 (Thunder)": {"type": "image", "path": "videos/work_thunder.png"},
         "日本庭園 (Japanese Garden)": {"type": "image", "path": "videos/work_japanesegarden.png"},
