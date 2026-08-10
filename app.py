@@ -25,6 +25,11 @@ assets = {
         "フレンチシック (French Chic)": {"type": "image", "path": "videos/living_french.png"},
         "コースタル (Coastal)": {"type": "image", "path": "videos/living_coastal.png"},
         "レトロモダン (Mid-Century)": {"type": "image", "path": "videos/living_retro.png"},
+        "サイバーパンク (Cyberpunk)": {"type": "image", "path": "videos/living_cyberpunk.png"},
+        "バイオフィリック未来 (Biophilic)": {"type": "image", "path": "videos/living_biophilic.png"},
+        "スペースエイジ (Space Age)": {"type": "image", "path": "videos/living_spaceage.png"},
+        "ポストアポカリプス (Ruins)": {"type": "image", "path": "videos/living_ruins.png"},
+        "ネオメンフィス (Neo-Memphis)": {"type": "image", "path": "videos/living_memphis.png"},
     },
     "ワークスペース (書斎)": {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
@@ -37,6 +42,11 @@ assets = {
         "フレンチシック (French Chic)": {"type": "image", "path": "videos/work_french.png"},
         "コースタル (Coastal)": {"type": "image", "path": "videos/work_coastal.png"},
         "レトロモダン (Mid-Century)": {"type": "image", "path": "videos/work_retro.png"},
+        "サイバーパンク (Cyberpunk)": {"type": "image", "path": "videos/work_cyberpunk.png"},
+        "バイオフィリック未来 (Biophilic)": {"type": "image", "path": "videos/work_biophilic.png"},
+        "スペースエイジ (Space Age)": {"type": "image", "path": "videos/work_spaceage.png"},
+        "ポストアポカリプス (Ruins)": {"type": "image", "path": "videos/work_ruins.png"},
+        "ネオメンフィス (Neo-Memphis)": {"type": "image", "path": "videos/work_memphis.png"},
     }
 }
 # サイドバー：ユーザーの選択項目
@@ -55,6 +65,11 @@ style = st.sidebar.selectbox(
         "フレンチシック (French Chic)",
         "コースタル (Coastal)",
         "レトロモダン (Mid-Century)"
+        "サイバーパンク (Cyberpunk)",
+        "バイオフィリック未来 (Biophilic)",
+        "スペースエイジ (Space Age)",
+        "ポストアポカリプス (Ruins)",
+        "ネオメンフィス (Neo-Memphis)"
     ]
 )
 
@@ -171,6 +186,47 @@ with col2:
         - **おすすめ家具:** 
             - ウッドフレームのパーソナルチェア
             - レトロなフロアランプ
+        """)
+    elif style == "サイバーパンク (Cyberpunk)":
+        st.markdown("""
+        - **コンセプト:** ネオンと金属質が織りなす近未来の都市空間
+        - **カラーパレット:** ネオンシアン、マゼンタ、クロームシルバー
+        - **おすすめ家具:** 
+            - LED発光ラインの家具
+            - メッシュパネルの壁面
+            - ホログラム風ディスプレイ
+        """)
+    elif style == "バイオフィリック未来 (Biophilic)":
+        st.markdown("""
+        - **コンセプト:** 自然とハイテクが融合した有機的な未来空間
+        - **カラーパレット:** 発光グリーン、アースブラウン、クリアホワイト
+        - **おすすめ家具:** 
+            - 流線型の有機的なチェア
+            - 壁面緑化システムと一体化した照明
+        """)
+    elif style == "スペースエイジ (Space Age)":
+        st.markdown("""
+        - **コンセプト:** レトロフューチャーな宇宙時代を彷彿とさせるポップな空間
+        - **カラーパレット:** オレンジ、ビビッドレッド、ホワイト
+        - **おすすめ家具:** 
+            - 球体や卵型のプラスチック家具
+            - ラウンドフレームのミラー
+        """)
+    elif style == "ポストアポカリプス (Ruins)":
+        st.markdown("""
+        - **コンセプト:** 文明崩壊後の世界を生き抜く退廃的シェルター風空間
+        - **カラーパレット:** 錆色、コンクリートグレー
+        - **おすすめ家具:** 
+            - ひび割れたコンクリート壁
+            - ドラム缶や古材を再利用したテーブル
+        """)
+    elif style == "ネオメンフィス (Neo-Memphis)":
+        st.markdown("""
+        - **コンセプト:** 奇抜な幾何学模様と偏光カラーが交差するアート空間
+        - **カラーパレット:** オーロラカラー、パステルミント
+        - **おすすめ家具:** 
+            - 偏光（オーロラ）アクリルのテーブル
+            - 非対称なブロックデザインのシェルフ
         """)
 
 # フッター
