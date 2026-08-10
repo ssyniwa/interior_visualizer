@@ -35,6 +35,11 @@ assets = {
         "アーバン・スタイリッシュ (Stylish)": {"type": "image", "path": "videos/living_stylish.png"},
         "寒冷地ロッジ (Alpine)": {"type": "image", "path": "videos/living_alpine.png"},
         "南国リゾート (Tropical)": {"type": "image", "path": "videos/living_tropical.png"},
+        "魔法ファンタジー (Fantasy)": {"type": "image", "path": "videos/living_fantasy.png"},
+        "研究所 (Laboratory)": {"type": "image", "path": "videos/living_lab.png"},
+        "海中 (Underwater)": {"type": "image", "path": "videos/living_underwater.png"},
+        "新緑の森 (Forest)": {"type": "image", "path": "videos/living_forest.png"},
+        "星空 (Starry Sky)": {"type": "image", "path": "videos/living_starry.png"},
     },
     "ワークスペース (書斎)": {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
@@ -57,8 +62,14 @@ assets = {
         "アーバン・スタイリッシュ (Stylish)": {"type": "image", "path": "videos/work_stylish.png"},
         "寒冷地ロッジ (Alpine)": {"type": "image", "path": "videos/work_alpine.png"},
         "南国リゾート (Tropical)": {"type": "image", "path": "videos/work_tropical.png"},
+        "魔法ファンタジー (Fantasy)": {"type": "image", "path": "videos/work_fantasy.png"},
+        "研究所 (Laboratory)": {"type": "image", "path": "videos/work_lab.png"},
+        "海中 (Underwater)": {"type": "image", "path": "videos/work_underwater.png"},
+        "新緑の森 (Forest)": {"type": "image", "path": "videos/work_forest.png"},
+        "星空 (Starry Sky)": {"type": "image", "path": "videos/work_starry.png"},
     }
 }
+
 # サイドバー：ユーザーの選択項目
 st.sidebar.header("🎨 リフォーム条件の選択")
 
@@ -84,7 +95,12 @@ style = st.sidebar.selectbox(
         "ロック＆グランジ (Rock)",
         "アーバン・スタイリッシュ (Stylish)",
         "寒冷地ロッジ (Alpine)",
-        "南国リゾート (Tropical)"
+        "南国リゾート (Tropical)",
+        "魔法ファンタジー (Fantasy)",
+        "研究所 (Laboratory)",
+        "海中 (Underwater)",
+        "新緑の森 (Forest)",
+        "星空 (Starry Sky)"
     ]
 )
 
@@ -116,6 +132,7 @@ with col1:
         # 画像を表示し、キャプションを追加
         st.image(content["path"], use_container_width=True)
         st.info("※ このスタイルは現在、静止画でのシミュレーションとなります。")
+
 with col2:
     st.subheader("💡 スタイルの特徴とポイント")
     
@@ -229,7 +246,7 @@ with col2:
         """)
     elif style == "ポストアポカリプス (Ruins)":
         st.markdown("""
-        - **コンセプト:** 文明崩壊後の世界を生き抜く退廃적シェルター風空間
+        - **コンセプト:** 文明崩壊後の世界を生き抜く退廃的シェルター風空間
         - **カラーパレット:** 錆色、コンクリートグレー
         - **おすすめ家具:** 
             - ひび割れたコンクリート壁
@@ -282,6 +299,46 @@ with col2:
         - **おすすめ家具:** 
             - バナナリーフやアバカ編みのリゾートチェア
             - 大型観葉植物（モンステラ等）
+        """)
+    elif style == "魔法ファンタジー (Fantasy)":
+        st.markdown("""
+        - **コンセプト:** 中世の魔法使いの隠れ家や、神秘的な魔法陣が漂う空間
+        - **カラーパレット:** ディープパープル、ゴールド、ミスティックブルー
+        - **おすすめ家具:** 
+            - 重厚な古木のブックシェルフと大量の魔導書
+            - 浮遊するキャンドルや発光するクリスタル・ポーション
+        """)
+    elif style == "研究所 (Laboratory)":
+        st.markdown("""
+        - **コンセプト:** 近未来の科学者やアルケミストの実験室をイメージした知的な空間
+        - **カラーパレット:** クリーンホワイト、スチールシルバー、アクセントブルー
+        - **おすすめ家具:** 
+            - ガラスのフラスコやビーカー、モニター機器が並ぶ作業台
+            - メタリックな高機能チェア、配線剥き出しのギミックシェルフ
+        """)
+    elif style == "海中 (Underwater)":
+        st.markdown("""
+        - **コンセプト:** 深海の水族館やドームの中にいるような、青のグラデーションが美しい空間
+        - **カラーパレット:** ディープアクア、サンドカラー、パールホワイト
+        - **おすすめ家具:** 
+            - 流線型の泡（バブル）をモチーフにしたライトやガラス家具
+            - サンゴ礁や水面を揺らぐ光を演出するプロジェクター照明
+        """)
+    elif style == "新緑の森 (Forest)":
+        st.markdown("""
+        - **コンセプト:** 木漏れ日が差し込む豊かな森の中にいるような、癒やしと生命力あふれる空間
+        - **カラーパレット:** モスグリーン、アースブラウン、サンライトゴールド
+        - **おすすめ家具:** 
+            - 枝の質感を活かしたウッドチェアや切り株風のスツール
+            - 豊富な観葉植物とフェイクツリー、蔦を這わせた壁面
+        """)
+    elif style == "星空 (Starry Sky)":
+        st.markdown("""
+        - **コンセプト:** 満天の夜空や天文台に包まれているような、ロマンチックで神秘的な空間
+        - **カラーパレット:** ミッドナイトブルー、プラチナシルバー、オーロラカラー
+        - **おすすめ家具:** 
+            - 天体望遠鏡や月の満ち欠けを模したインテリアオブジェ
+            - 天井に広がるプラネタリウム風の投射照明、ベロア調のダークソファ
         """)
 
 # フッター
