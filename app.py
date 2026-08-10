@@ -64,7 +64,7 @@ style = st.sidebar.selectbox(
         "ブルックリン (Brooklyn)",
         "フレンチシック (French Chic)",
         "コースタル (Coastal)",
-        "レトロモダン (Mid-Century)"
+        "レトロモダン (Mid-Century)",
         "サイバーパンク (Cyberpunk)",
         "バイオフィリック未来 (Biophilic)",
         "スペースエイジ (Space Age)",
