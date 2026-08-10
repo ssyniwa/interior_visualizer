@@ -30,6 +30,11 @@ assets = {
         "スペースエイジ (Space Age)": {"type": "image", "path": "videos/living_spaceage.png"},
         "ポストアポカリプス (Ruins)": {"type": "image", "path": "videos/living_ruins.png"},
         "ネオメンフィス (Neo-Memphis)": {"type": "image", "path": "videos/living_memphis.png"},
+        "カラーポップ (Colorful)": {"type": "image", "path": "videos/living_colorful.png"},
+        "ロック＆グランジ (Rock)": {"type": "image", "path": "videos/living_rock.png"},
+        "アーバン・スタイリッシュ (Stylish)": {"type": "image", "path": "videos/living_stylish.png"},
+        "寒冷地ロッジ (Alpine)": {"type": "image", "path": "videos/living_alpine.png"},
+        "南国リゾート (Tropical)": {"type": "image", "path": "videos/living_tropical.png"},
     },
     "ワークスペース (書斎)": {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
@@ -47,6 +52,11 @@ assets = {
         "スペースエイジ (Space Age)": {"type": "image", "path": "videos/work_spaceage.png"},
         "ポストアポカリプス (Ruins)": {"type": "image", "path": "videos/work_ruins.png"},
         "ネオメンフィス (Neo-Memphis)": {"type": "image", "path": "videos/work_memphis.png"},
+        "カラーポップ (Colorful)": {"type": "image", "path": "videos/work_colorful.png"},
+        "ロック＆グランジ (Rock)": {"type": "image", "path": "videos/work_rock.png"},
+        "アーバン・スタイリッシュ (Stylish)": {"type": "image", "path": "videos/work_stylish.png"},
+        "寒冷地ロッジ (Alpine)": {"type": "image", "path": "videos/work_alpine.png"},
+        "南国リゾート (Tropical)": {"type": "image", "path": "videos/work_tropical.png"},
     }
 }
 # サイドバー：ユーザーの選択項目
@@ -69,7 +79,12 @@ style = st.sidebar.selectbox(
         "バイオフィリック未来 (Biophilic)",
         "スペースエイジ (Space Age)",
         "ポストアポカリプス (Ruins)",
-        "ネオメンフィス (Neo-Memphis)"
+        "ネオメンフィス (Neo-Memphis)",
+        "カラーポップ (Colorful)",
+        "ロック＆グランジ (Rock)",
+        "アーバン・スタイリッシュ (Stylish)",
+        "寒冷地ロッジ (Alpine)",
+        "南国リゾート (Tropical)"
     ]
 )
 
@@ -214,7 +229,7 @@ with col2:
         """)
     elif style == "ポストアポカリプス (Ruins)":
         st.markdown("""
-        - **コンセプト:** 文明崩壊後の世界を生き抜く退廃的シェルター風空間
+        - **コンセプト:** 文明崩壊後の世界を生き抜く退廃적シェルター風空間
         - **カラーパレット:** 錆色、コンクリートグレー
         - **おすすめ家具:** 
             - ひび割れたコンクリート壁
@@ -227,6 +242,46 @@ with col2:
         - **おすすめ家具:** 
             - 偏光（オーロラ）アクリルのテーブル
             - 非対称なブロックデザインのシェルフ
+        """)
+    elif style == "カラーポップ (Colorful)":
+        st.markdown("""
+        - **コンセプト:** 鮮やかな色彩と多彩な柄が溢れるエネルギッシュな空間
+        - **カラーパレット:** ショッキングピンク、エメラルドグリーン、サンシャインイエロー
+        - **おすすめ家具:** 
+            - ベルベット素材のカラフルなソファ
+            - 壁面ギャラリー（アート・小物）
+        """)
+    elif style == "ロック＆グランジ (Rock)":
+        st.markdown("""
+        - **コンセプト:** ライブハウスのバックステージを思わせる反逆的でカッコいい空間
+        - **カラーパレット:** マットブラック、チャコール、バーガンディ
+        - **おすすめ家具:** 
+            - チェスターフィールドの黒革ソファ
+            - スタッズ付き家具、アンプ型スピーカー
+        """)
+    elif style == "アーバン・スタイリッシュ (Stylish)":
+        st.markdown("""
+        - **コンセプト:** 都会的で洗練された高級ホテルのようなシャープな空間
+        - **カラーパレット:** チャコールグレー、シルバー、ダークウォールナット
+        - **おすすめ家具:** 
+            - ガラス・大理石調のローテーブル
+            - 間接照明を活かしたスタイリッシュなレイアウト
+        """)
+    elif style == "寒冷地ロッジ (Alpine)":
+        st.markdown("""
+        - **コンセプト:** 雪深い極寒の地で暖を取る、温もりと重厚感のある空間
+        - **カラーパレット:** スノーホワイト、パインウッド、ディープフォレストグリーン
+        - **おすすめ家具:** 
+            - ムートンラグやファー素材のクッション
+            - 薪ストーブ、天然木のウッドファニチャー
+        """)
+    elif style == "南国リゾート (Tropical)":
+        st.markdown("""
+        - **コンセプト:** 陽気な南国の楽園や高級ヴィラを思わせる開放的な空間
+        - **カラーパレット:** サンドホワイト、ハイビスカスレッド、ターコイズ
+        - **おすすめ家具:** 
+            - バナナリーフやアバカ編みのリゾートチェア
+            - 大型観葉植物（モンステラ等）
         """)
 
 # フッター
