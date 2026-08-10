@@ -40,6 +40,11 @@ assets = {
         "海中 (Underwater)": {"type": "image", "path": "videos/living_underwater.png"},
         "新緑の森 (Forest)": {"type": "image", "path": "videos/living_forest.png"},
         "星空 (Starry Sky)": {"type": "image", "path": "videos/living_starry.png"},
+        "天空 (Sky Sanctuary)": {"type": "image", "path": "videos/living_sky.png"},
+        "電子空間 (Cyberspace)": {"type": "image", "path": "videos/living_cyberspace.png"},
+        "雷鳴 (Thunder)": {"type": "image", "path": "videos/living_thunder.png"},
+        "日本庭園 (Japanese Garden)": {"type": "image", "path": "videos/living_japanesegarden.png"},
+        "クリスタル (Crystal)": {"type": "image", "path": "videos/living_crystal.png"},
     },
     "ワークスペース (書斎)": {
         "北欧風 (Scandinavian)": {"type": "video", "path": "videos/work_scandi.mp4"},
@@ -67,6 +72,11 @@ assets = {
         "海中 (Underwater)": {"type": "image", "path": "videos/work_underwater.png"},
         "新緑の森 (Forest)": {"type": "image", "path": "videos/work_forest.png"},
         "星空 (Starry Sky)": {"type": "image", "path": "videos/work_starry.png"},
+        "天空 (Sky Sanctuary)": {"type": "image", "path": "videos/work_sky.png"},
+        "電子空間 (Cyberspace)": {"type": "image", "path": "videos/work_cyberspace.png"},
+        "雷鳴 (Thunder)": {"type": "image", "path": "videos/work_thunder.png"},
+        "日本庭園 (Japanese Garden)": {"type": "image", "path": "videos/work_japanesegarden.png"},
+        "クリスタル (Crystal)": {"type": "image", "path": "videos/work_crystal.png"},
     }
 }
 
@@ -100,7 +110,12 @@ style = st.sidebar.selectbox(
         "研究所 (Laboratory)",
         "海中 (Underwater)",
         "新緑の森 (Forest)",
-        "星空 (Starry Sky)"
+        "星空 (Starry Sky)",
+        "天空 (Sky Sanctuary)",
+        "電子空間 (Cyberspace)",
+        "雷鳴 (Thunder)",
+        "日本庭園 (Japanese Garden)",
+        "クリスタル (Crystal)"
     ]
 )
 
@@ -339,6 +354,46 @@ with col2:
         - **おすすめ家具:** 
             - 天体望遠鏡や月の満ち欠けを模したインテリアオブジェ
             - 天井に広がるプラネタリウム風の投射照明、ベロア調のダークソファ
+        """)
+    elif style == "天空 (Sky Sanctuary)":
+        st.markdown("""
+        - **コンセプト:** 雲の上の神殿や浮島にいるような、どこまでも開放的で清らかな空間
+        - **カラーパレット:** スカイブルー、ピュアホワイト、ゴールド
+        - **おすすめ家具:** 
+            - 羽や雲をモチーフにした軽やかなファブリック
+            - 白木を基調としたローベッド、光を透過するガラスのオブジェ
+        """)
+    elif style == "電子空間 (Cyberspace)":
+        st.markdown("""
+        - **コンセプト:** デジタルデータの海やプログラムの内部に入り込んだような、無機質で先進的な空間
+        - **カラーパレット:** マトリックスグリーン、ピクセルブラック、エレクトリックブルー
+        - **おすすめ家具:** 
+            - ワイヤーフレームやデータストリームが流れる壁面ディスプレイ
+            - ミニマルな幾何学デザインの金属製デスク
+        """)
+    elif style == "雷鳴 (Thunder)":
+        st.markdown("""
+        - **コンセプト:** 嵐のなかの落雷をモチーフにした、鋭くエネルギッシュでスタイリッシュな空間
+        - **カラーパレット:** プラズマバイオレット、ストームグレー、フラッシュイエロー
+        - **おすすめ家具:** 
+            - 稲妻の軌道を模した間接照明やネオンチューブ
+            - ダークメタリックなソリッド家具、高硬度ガラスのテーブル
+        """)
+    elif style == "日本庭園 (Japanese Garden)":
+        st.markdown("""
+        - **コンセプト:** 伝統的な枯山水や和の庭を室内で表現した、圧倒的な静寂と気品漂う空間
+        - **カラーパレット:** 苔色、砂利ホワイト、檜（ひのき）のナチュラルウッド
+        - **おすすめ家具:** 
+            - 低重心な木製ローソファ、竹や和紙を用いた仕切り
+            - 室内にミニチュアの庭や灯籠をあしらった癒やしのレイアウト
+        """)
+    elif style == "クリスタル (Crystal)":
+        st.markdown("""
+        - **コンセプト:** 鉱山や洞窟に眠る巨大な水晶結晶に囲まれた、透明感と神秘的な輝きを放つ空間
+        - **カラーパレット:** クリスタルクリア、ローズピンク、アイリスパープル
+        - **おすすめ家具:** 
+            - 原石やジオード（晶洞）のインテリア置物
+            - 乱反射するアクリルやガラスで統一されたファニチャー
         """)
 
 # フッター
